@@ -10,8 +10,9 @@ import calendar
 def task(request):
     name = request.GET.get('slack_name', 'Oluwatobiloba777')
     track = request.GET.get('track', 'backend')
-    utc_time = datetime.now()
-    current_day = calendar.day_name[utc_time.weekday()]
+    utc_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    currentDay = datetime.now()
+    current_day = calendar.day_name[currentDay.weekday()]
 
     data = {
     "slack_name": name,
