@@ -13,12 +13,12 @@ def task(request):
     utc_time = datetime.now()
     current_day = calendar.day_name[utc_time.weekday()]
 
-    dicct = {
+    data = {
     "slack_name": name,
     "current_day": current_day,
     "utc_time": utc_time,
     "track": track,
-    "github_file_url": "git file link",
+    "github_file_url": "https://github.com/Oluwatobiloba777/HNG-API/blob/main/hngtask/hngapi/views.py",
     "github_repo_url": "https://github.com/Oluwatobiloba777/HNG-API",
 }
-    return JsonResponse(dicct, safe=False)
+    return JsonResponse(data, safe=False)
