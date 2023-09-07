@@ -20,5 +20,6 @@ def task(request):
     "track": track,
     "github_file_url": "https://github.com/Oluwatobiloba777/HNG-API/blob/main/hngtask/hngapi/views.py",
     "github_repo_url": "https://github.com/Oluwatobiloba777/HNG-API",
+    "status_code": 200
 }
     return JsonResponse(data, safe=False)
